@@ -18,9 +18,7 @@ public class Lecture {
 				counter++;
 			}
 			number++;
-		}
+		}	
 	
-		
 	}
-
 }
