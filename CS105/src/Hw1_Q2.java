@@ -1,24 +1,32 @@
 import java.util.Scanner;
 
-public class VowelConsonantCounter {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+public class Hw1_Q2 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		
         System.out.print("Enter a string: ");
-        String input = scanner.nextLine().toLowerCase();
-        scanner.close();
-        int vowelCount = 0;
-        int consonantCount = 0;
-        for (int i = 0; i < input.length(); i++) {
-            String ch = input.substring(i, i+1);
-            if (ch.matches("[a-z]")) {
-                if (ch.matches("[aeiou]")) {
-                    vowelCount++;
+        String words = input.nextLine().toLowerCase();
+        
+
+        int vowelNum = 0;
+        int consonantNum = 0;
+        
+        for (int i = 0; i < words.length(); i++) {
+            String str = words.substring(i, i+1);
+            if (str.matches("[a-z]")) {
+                if (str.matches("[aeiou]")) {
+                    vowelNum++;
                 } else {
-                    consonantCount++;
+                    consonantNum++;
                 }
+                
             }
         }
-        System.out.println("The number of vowels is " + vowelCount);
-        System.out.println("The number of consonants is " + consonantCount);
-    }
+        
+        System.out.println("The number of vowels is " + vowelNum);
+        System.out.println("The number of consonants is " + consonantNum);
+	}
+
 }
